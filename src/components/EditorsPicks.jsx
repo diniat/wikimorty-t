@@ -15,7 +15,7 @@ const EditorsPicks = ({ characters }) => {
   return (
     <>
       <h1 className={`${font.className} text-2xl mb-2 md:mb-4 md:text-4xl`}>
-        The Editor's Picks
+        The Editor&apos;s Picks
       </h1>
       <div
         id="editorsPicks"
