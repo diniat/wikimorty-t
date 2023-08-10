@@ -1,23 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { toast } from "react-hot-toast";
-import axios from "axios";
+import React, { useState } from "react";
 import SpeciesSelection from "./SpeciesSelection";
 import CharacterTable from "./CharacterTable";
 
-const FilterableCharactersTable = () => {
-  const [characters, setCharacters] = useState([]);
+const FilterableCharactersTable = ({ characters }) => {
   const [selectedSpecies, setSelectedSpecies] = useState(undefined);
-
-  useEffect(() => {
-    axios
-      .get("https://rickandmortyapi.com/api/character/")
-      .then((response) => {
-        setCharacters(response.data.results);
-      })
-      .catch((error) => {
-        toast.error("Something went wrong.", error);
-      });
-  }, []);
 
   const selectSpecies = (species) => {
     setSelectedSpecies(species);

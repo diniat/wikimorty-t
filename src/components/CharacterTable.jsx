@@ -4,26 +4,26 @@ import { Montserrat } from "next/font/google";
 
 const font2 = Montserrat({ weight: "500", subsets: ["latin"] });
 
-const CharacterTable = ({ characters }) => {
+const Characterdiv = ({ characters }) => {
   return (
-    <table
+    <div
       className={`${font2.className}text-sm mt-2 mb-2 pb-1 w-full md:text-lg`}
     >
-      <thead className="">
-        <tr className={`${font2.className} grid grid-cols-4 gap-x-1`}>
-          <th className="">ID</th>
-          <th className="">Name</th>
-          <th className="">Status</th>
-          <th className="">Species</th>
-        </tr>
-      </thead>
-      <tbody className="border-solid  border-black">
+      <div className="">
+        <ul className={`${font2.className} grid grid-cols-4 gap-x-1`}>
+          <li className="">ID</li>
+          <li className="">Name</li>
+          <li className="">Status</li>
+          <li className="">Species</li>
+        </ul>
+      </div>
+      <div className="">
         {characters.map((character) => (
           <CharacterRow key={character.id} character={character} />
         ))}
-      </tbody>
-    </table>
+      </div>
+    </div>
   );
 };
 
-export default CharacterTable;
+export default Characterdiv;

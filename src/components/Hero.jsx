@@ -11,9 +11,7 @@ const Hero = () => {
   return (
     <div className="w-full flex items-center justify-center h-auto mt-6 mb-12 bg-gray-2 lg:h-screen lg:my-0">
       <div className="h-auto my-5 w-[95vw] bg-gray-1 p-5 rounded-2xl shadow-xl flex flex-col items-center lg:h-[78vh]">
-        <div
-          className={`${font2.className}flex flex-row justify-center items-center`}
-        >
+        <div className={`${font2.className}flex  justify-center items-center`}>
           <Link href="/">
             <Image
               src={"/images/logo.png"}
@@ -57,11 +55,11 @@ const Hero = () => {
               <button
                 className={`${font2.className} mb-5 self-center bg-gradient-to-l from-green-400 via-cyan-700 text-white shadow-md w-[45vw] rounded-lg  p-2 text-lg lg:mb-1 md:text-xl md:w-[25vw] md:p-3 md:self-start`}
               >
-                Start Browsing
+                See all Characters
               </button>
             </Link>
           </div>
-          <div className="px-3 pt-2 mb-5 pb-2 xl:mt-14">
+          <aside className="px-3 pt-2 mb-5 pb-2 xl:mt-14">
             <Image
               src={"/images/hero.png"}
               alt="hero-img"
@@ -69,7 +67,7 @@ const Hero = () => {
               height={290}
               priority
             />
-          </div>
+          </aside>
         </div>
       </div>
     </div>
